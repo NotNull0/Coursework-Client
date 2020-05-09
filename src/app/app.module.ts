@@ -11,10 +11,20 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {AuthorizationInterceptor} from "./shared/service/interceptor/authorization.interceptor";
 import {AuthenticationInterceptor} from "./shared/service/interceptor/authentication.interceptor";
 import {RefreshInterceptor} from "./shared/service/interceptor/refresh.interceptor";
+import { SignInComponent } from './sign-in/sign-in.component';
+import { HomeComponent } from './home/home.component';
+import { UserAccountComponent } from './home/user-account/user-account.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
+import { ProjectOneComponent } from './home/user-account/project-one/project-one.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignInComponent,
+    HomeComponent,
+    UserAccountComponent,
+    DashboardComponent,
+    ProjectOneComponent
   ],
   imports: [
     BrowserModule,

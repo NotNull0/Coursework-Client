@@ -1,5 +1,5 @@
 export const OAUTH_TOKEN_PATH:string="/oauth/token";
-export const BASIC = 'Basic bXktY2xpZW50Om15LXNlY3JldA==';
+export const BASIC = 'Basic aXRfdGFza19wbGF0Zm9ybTpzZWNyZXQ=';
 export const CONTENT_TYPE = 'Content-Type';
 export const AUTHORIZATION = 'Authorization';
 export const ACCEPT = 'Accept';

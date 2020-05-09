@@ -27,7 +27,9 @@ const access_token="access_token";
 @Injectable()
 export class AuthInterceptorService implements HttpInterceptor {
 
-  constructor(private _router: Router, private _userDetailsService: UserDetailsService, private _localStorageService: LocalStorageService) {
+  constructor(private _router: Router,
+              private _userDetailsService: UserDetailsService,
+              private _localStorageService: LocalStorageService) {
   }
 
   intercept<T>(req: HttpRequest<T>, next: HttpHandler): Observable<HttpEvent<T>> {
@@ -45,10 +47,6 @@ export class AuthInterceptorService implements HttpInterceptor {
           this._userDetailsService.logout();
         }
       } else if (err.status == 0) {
-        // console.warn("----------0-------------");
-        // setTimeout(()=>{
-        //   location.reload();
-        // },5000)
         return throwError(err);
       } else {
         return throwError(err);

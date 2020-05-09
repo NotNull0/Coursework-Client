@@ -10,7 +10,7 @@ import {HttpMethod} from './config/HttpMethod';
 export class AuthorizationInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    // console.log('AuthorizationInterceptor');
+    console.log("INININ");
     if ((req.url.includes(OAUTH_TOKEN_PATH)|| req.url == OAUTH_TOKEN_PATH) && req.method == HttpMethod.POST) {
       req = req.clone({
         headers: req.headers
@@ -18,11 +18,6 @@ export class AuthorizationInterceptor implements HttpInterceptor {
           .set(CONTENT_TYPE, [APP_JSON, APP_FORM]),
       });
     }
- /*   console.log(req);
-    console.log(req.url);
-    console.log(req.headers);
-    console.log(JSON.stringify(req.headers));
-    console.log(JSON.stringify(req.headers.keys()));*/
     return next.handle(req);
   }
 
