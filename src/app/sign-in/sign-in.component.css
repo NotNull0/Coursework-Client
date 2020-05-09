@@ -1,0 +1,40 @@
+
+*{
+  text-align: center;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.inner-container{
+  width: 25vw;
+  height: 25vh;
+  margin-left: 37.5vw;
+  margin-top: 37.5vh;
+  border-radius: 12px;
+  padding: 1vw 1vh;
+  background: white;
+  -webkit-box-shadow: 9px -8px 9px -1px rgba(71,148,255,1);
+  -moz-box-shadow: 9px -8px 9px -1px rgba(71,148,255,1);
+  box-shadow: 9px -8px 9px -1px rgba(71,148,255,1);
+
+
+overflow: hidden;
+}
+
+.example-full-width{
+  width: 80%;
+  margin: 0 10%;
+}
+input{
+}
+
+.main{
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+  background-repeat: no-repeat;
+
+}

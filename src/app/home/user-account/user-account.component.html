@@ -1,0 +1,20 @@
+
+
+  <mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="left-container" mode="over">
+      <!--    <div class="left-container">-->
+            <app-project-one></app-project-one>
+            <app-project-one></app-project-one>
+            <app-project-one></app-project-one>
+            <app-project-one></app-project-one>
+            <app-project-one></app-project-one>
+      <!--    </div>-->
+    </mat-drawer>
+
+      <div class="right-container">
+        <button class="list-project" mat-fab color="primary" (click)="drawer.toggle()"> <mat-icon>list</mat-icon></button>
+      </div>
+
+  </mat-drawer-container>
+
+

@@ -1,0 +1,52 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.right-container {
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+  float: left;
+  overflow-x: hidden;
+  background: red;
+
+}
+
+.left-container {
+  width: 30vw;
+  height: 100vh;
+  display: inline-block;
+  float: left;
+  background: gray;
+}
+.header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 10vh;
+  width: 100vw;
+  background: aqua;
+}
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.list-project{
+  position: fixed;
+  left: 1vw;
+  top: 1vh;
+}
