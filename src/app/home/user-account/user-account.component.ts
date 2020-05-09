@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ProjectService} from '../../shared/service/project.service';
+import {Page} from '../../shared/model/page';
+import {Project} from '../../shared/model/project';
 
 @Component({
   selector: 'app-user-account',
@@ -7,10 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserAccountComponent implements OnInit {
   showFiller = false;
+  projects: Page<Project>;
 
-  constructor() { }
+  constructor(private _projectService: ProjectService) {
+    this.getProject(0, 10);
+  }
 
   ngOnInit() {
   }
 
+  getProject(page: number, size: number) {
+    this._projectService.getProjectList(page, size).subscribe(value => {
+        this.projects = value;
+      }, error => {
+        console.error(error);
+      }
+    );
+  }
 }
