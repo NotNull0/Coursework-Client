@@ -1,3 +1,12 @@
-<p>
-
-</p>
+<div class="example-container">
+  <div
+    cdkDropList
+    id="status_drop_list_{{status?.id}}"
+    #doneList="cdkDropList"
+    [cdkDropListData]="task"
+    [cdkDropListConnectedTo]="connectedList"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of task" cdkDrag>{{item.name}}</div>
+  </div>
+</div>

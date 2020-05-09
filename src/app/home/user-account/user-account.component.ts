@@ -15,7 +15,7 @@ export class UserAccountComponent implements OnInit {
   projects: Page<Project>;
   selectProject: number;
   projectStatuses: Status[];
-
+  connectedList: string[] = []
   constructor(private _projectService: ProjectService, private _activatedRoute: ActivatedRoute) {
     this.getProject(0, 10);
     _activatedRoute.queryParams.subscribe(value => {
@@ -39,7 +39,11 @@ export class UserAccountComponent implements OnInit {
   init() {
     if (this.selectProject) {
       this._projectService.getProjectStatusList(this.selectProject).subscribe(value => {
+        this.connectedList=[];
         this.projectStatuses = value;
+        value.forEach(value1 => {
+          this.connectedList.push(`status_drop_list_${value1.id}`);
+        })
       }, error => {
         console.log(error);
       });

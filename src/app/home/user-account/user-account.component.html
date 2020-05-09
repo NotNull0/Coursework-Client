@@ -9,6 +9,8 @@
       <mat-icon>list</mat-icon>
     </button>
 
+    <app-project-status-one *ngFor="let one of projectStatuses" [connectedList]="connectedList" [status]="one"></app-project-status-one>
+
   </div>
 
 </mat-drawer-container>
