@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { UserAccountComponent } from './home/user-account/user-account.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { ProjectOneComponent } from './home/user-account/project-one/project-one.component';
+import { ProjectStatusOneComponent } from './home/user-account/project-status-one/project-status-one.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProjectOneComponent } from './home/user-account/project-one/project-one
     HomeComponent,
     UserAccountComponent,
     DashboardComponent,
-    ProjectOneComponent
+    ProjectOneComponent,
+    ProjectStatusOneComponent
   ],
   imports: [
     BrowserModule,

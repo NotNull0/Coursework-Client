@@ -1,3 +1,6 @@
-<div class="container">
-{{project?.name}}
+<div class="container pointer"
+     [routerLink]="['/home/user']" routerLinkActive="active"
+     [queryParams]="{project_id: project?.id}">
+  {{project?.id}}
+  {{project?.name}}
 </div>
