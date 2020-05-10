@@ -17,4 +17,9 @@ export class TaskService {
     return this._httpClient.get<any>(this.controller + `/tasks/search/findAllByStatusProject`, {params: param})
       .pipe(map(value => value._embedded.tasks), catchError(err => throwError(err)));
   }
+
+  update(task:Task): Observable<Task> {
+    return this._httpClient.put<Task>(this.controller + `/tasks/${task.id}`, JSON.stringify(task))
+      .pipe(catchError(err => throwError(err)));
+  }
 }

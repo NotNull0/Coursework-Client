@@ -15,7 +15,7 @@ export class UserAccountComponent implements OnInit {
   projects: Page<Project>;
   selectProject: number;
   projectStatuses: Status[];
-  connectedList: string[] = []
+  connectedList: string[] = [];
   constructor(private _projectService: ProjectService, private _activatedRoute: ActivatedRoute) {
     this.getProject(0, 10);
     _activatedRoute.queryParams.subscribe(value => {

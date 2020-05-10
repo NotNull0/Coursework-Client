@@ -15,6 +15,7 @@ export class ProjectStatusOneComponent implements OnInit {
   @Input() status: Status;
 
   task: Task[] = [];
+  taskToUpdate: Task;
 
   constructor(private _taskService: TaskService) {
   }
@@ -23,7 +24,14 @@ export class ProjectStatusOneComponent implements OnInit {
     this.getTasksFromStatus(this.status.id);
   }
 
+
   drop(event: CdkDragDrop<Task[]>) {
+    console.log(event.previousContainer.data);
+    console.log(this.taskToUpdate = event.previousContainer.data[event.previousIndex]);
+    console.log(this.status);
+    this.taskToUpdate.status.id = this.status.id;
+    this.taskToUpdate.status.name = this.status.name;
+    this.update(this.taskToUpdate);
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
@@ -37,6 +45,14 @@ export class ProjectStatusOneComponent implements OnInit {
   getTasksFromStatus(idStatus: number) {
     this._taskService.getProjectStatusTaskList(idStatus).subscribe(value => {
       this.task = value;
+    }, error => {
+      console.log(error);
+    });
+  }
+
+  update(task: Task) {
+    this._taskService.update(task).subscribe(value => {
+      console.log(value);
     }, error => {
       console.log(error);
     });

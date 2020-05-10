@@ -1,4 +1,6 @@
 import {TypeTask} from './enums';
+import {Status} from '../service/model/status';
+import {Project} from './project';
 
 export class Task {
   id: number;
@@ -6,4 +8,6 @@ export class Task {
   name: string;
   idCreator: number;
   assignedToUser: number;
+  status: Status;
+  project: Project;
 }
