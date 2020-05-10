@@ -29,5 +29,12 @@ export class TaskService {
       .pipe(catchError(err => throwError(err)));
   }
 
+  delete(id: number): Observable<any> {
+    let param: HttpParams = new HttpParams()
+      .set('id', String(id));
+    return this._httpClient.delete<any>(this.controller + `/task/delete`, {params: param})
+      .pipe(catchError(err => throwError(err)));
+  }
+
 
 }

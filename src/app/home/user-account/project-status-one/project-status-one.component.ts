@@ -3,6 +3,8 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 import {Task} from '../../../shared/model/task';
 import {Status} from '../../../shared/service/model/status';
 import {TaskService} from '../../../shared/service/task.service';
+import {MatDialog} from '@angular/material';
+import {OpenTaskDialogComponent} from '../../../dialogs/open-task-dialog/open-task-dialog.component';
 
 @Component({
   selector: 'app-project-status-one',
@@ -17,13 +19,27 @@ export class ProjectStatusOneComponent implements OnInit {
   task: Task[] = [];
   taskToUpdate: Task;
 
-  constructor(private _taskService: TaskService) {
+  constructor(private _taskService: TaskService,
+              public dialog: MatDialog) {
   }
 
   ngOnInit() {
     this.getTasksFromStatus(this.status.id);
   }
 
+  openDialog(task:Task): void {
+    event.preventDefault();
+    const dialogRef = this.dialog.open(OpenTaskDialogComponent, {
+      width: '800px',
+      height:'700px',
+      data: task
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.ngOnInit()
+    });
+  }
 
   drop(event: CdkDragDrop<Task[]>) {
     console.log(event.previousContainer.data);

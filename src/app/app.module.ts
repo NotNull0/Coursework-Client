@@ -33,7 +33,8 @@ import { OpenTaskDialogComponent } from './dialogs/open-task-dialog/open-task-di
     OpenTaskDialogComponent,
   ],
   entryComponents:[
-    CreateTaskDialogComponent
+    CreateTaskDialogComponent,
+    OpenTaskDialogComponent
   ],
   imports: [
     BrowserModule,
