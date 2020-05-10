@@ -17,6 +17,8 @@ import { UserAccountComponent } from './home/user-account/user-account.component
 import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { ProjectOneComponent } from './home/user-account/project-one/project-one.component';
 import { ProjectStatusOneComponent } from './home/user-account/project-status-one/project-status-one.component';
+import { CreateTaskDialogComponent } from './dialogs/create-task-dialog/create-task-dialog.component';
+import { OpenTaskDialogComponent } from './dialogs/open-task-dialog/open-task-dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,12 @@ import { ProjectStatusOneComponent } from './home/user-account/project-status-on
     UserAccountComponent,
     DashboardComponent,
     ProjectOneComponent,
-    ProjectStatusOneComponent
+    ProjectStatusOneComponent,
+    CreateTaskDialogComponent,
+    OpenTaskDialogComponent,
+  ],
+  entryComponents:[
+    CreateTaskDialogComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,10 @@
-<mat-drawer-container class="container" autosize>
+<mat-toolbar>
+  <p class="project-name">{{selectProjectObject?.name}}</p>
+  <button class="create-task-button" mat-raised-button (click)="openDialog()">Додати нове завдання</button>
 
+</mat-toolbar>
+
+<mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="left-container" mode="over">
     <app-project-one *ngFor="let one of projects?.content" [project]="one"></app-project-one>
   </mat-drawer>
@@ -9,7 +14,8 @@
       <mat-icon>list</mat-icon>
     </button>
 
-    <app-project-status-one *ngFor="let one of projectStatuses" [connectedList]="connectedList" [status]="one"></app-project-status-one>
+    <app-project-status-one *ngFor="let one of projectStatuses" [connectedList]="connectedList"
+                            [status]="one"></app-project-status-one>
 
   </div>
 

@@ -48,4 +48,17 @@
   position: fixed;
   left: 1vw;
   top: 1vh;
+  margin-top: -8px;
+  margin-left: -15px;
+
+
+}
+.project-name{
+  padding-top: 15px;
+  padding-left: 70px;
+}
+
+.create-task-button{
+  margin-left: 20px;
+
 }
