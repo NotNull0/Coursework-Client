@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="header">
+  <mat-toolbar-row>
+    <div class="container">
+      <span>Admin Page</span>
+      <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">Працівники</button>
+      <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">Primary</button>
+      <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">Primary</button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+  </mat-drawer>
+
+</mat-drawer-container>
