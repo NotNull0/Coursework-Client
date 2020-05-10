@@ -1,0 +1,53 @@
+<div class="title">
+  <h1 mat-dialog-title>{{data.name}}
+    <button class="delete" mat-raised-button (click)="delete(data.id)">
+      <mat-icon (click)="delete(data.id)">delete</mat-icon>
+    </button>
+  </h1>
+</div>
+<mat-grid-list cols="4" rowHeight="300px">
+
+  <mat-grid-tile colspan="2">
+    <mat-card class="desc">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile class="tegs"colspan="2">
+    <mat-card >
+      <mat-list>
+        <mat-list-item> Номер :{{data.id}} </mat-list-item>
+        <mat-list-item> Назва :{{data.name}} </mat-list-item>
+        <mat-list-item> Статус :{{data.status.name}} </mat-list-item>
+        <mat-list-item> Створив :{{data?.assignedToUser}} </mat-list-item>
+        <mat-list-item> Виконавець :{{data?.idCreator}} </mat-list-item>
+        <mat-list-item> Тип завдання :{{data.typeTask}} </mat-list-item>
+      </mat-list>
+    </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+
+<!--<div mat-dialog-content>-->
+<!--  <mat-list>-->
+<!--    <div class="task-tag">-->
+<!--      <mat-list-item> Номер :{{data.id}} </mat-list-item>-->
+<!--      <mat-list-item> Назва :{{data.name}} </mat-list-item>-->
+<!--      <mat-list-item> Статус :{{data.status.name}} </mat-list-item>-->
+<!--      <mat-list-item> Створив :{{data?.assignedToUser}} </mat-list-item>-->
+<!--      <mat-list-item> Виконавець :{{data?.idCreator}} </mat-list-item>-->
+<!--      <mat-list-item> Тип завдання :{{data.typeTask}} </mat-list-item>-->
+<!--    </div>-->
+<!--    <div class="task-description">-->
+<!--    </div>-->
+<!--  </mat-list>-->
+<!--</div>-->
+<!--<div mat-dialog-actions>-->
+
+<!--</div>-->

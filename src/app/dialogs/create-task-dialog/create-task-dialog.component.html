@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>Добавити нове завдання</h1>
+
+<div mat-dialog-content [formGroup]="createTaskFG">
+  <!-- name-->
+  <mat-form-field>
+    <mat-label>Назва завдання</mat-label>
+    <input formControlName="name" matInput placeholder="Імя">
+  </mat-form-field>
+  <!--  -->
+  <mat-form-field>
+    <mat-label>Тип завдання</mat-label>
+    <mat-select formControlName="typeTask">
+      <mat-option *ngFor="let type of typeTask" [value]="type">
+        {{type}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!--  -->
+  <mat-form-field>
+    <mat-label>Статус завдання</mat-label>
+    <mat-select formControlName="idStatus">
+      <mat-option *ngFor="let status of data?.status" [value]="status.id">
+        {{status.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Добавити</button>
+</div>

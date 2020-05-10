@@ -1,0 +1,26 @@
+.task-tag {
+  text-align: right;
+}
+
+.title {
+  border-bottom: solid 1px black;
+
+}
+
+.desc {
+  margin-top: -135px;
+  border-bottom: solid 1px black;
+  -webkit-box-shadow: 10px 10px 5px 3px rgba(224,224,224,1);
+  -moz-box-shadow: 10px 10px 5px 3px rgba(224,224,224,1);
+  box-shadow: 10px 10px 5px 3px rgba(224,224,224,1);
+
+}
+.tegs{
+  margin-top: 10px;
+
+}
+
+.delete {
+  margin-left: 367px;
+
+}
