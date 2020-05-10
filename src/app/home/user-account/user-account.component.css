@@ -5,20 +5,24 @@
 }
 
 .right-container {
+  /*background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);*/
+
   width: 100vw;
   height: 100vh;
   display: inline-block;
   float: left;
   overflow-x: hidden;
-  background: #eae5e5;
+  background: #f2f2f2;
 }
 
 .left-container {
-  width: 30vw;
+  width: 20vw;
+
   height: 100vh;
   display: inline-block;
   float: left;
-  background: gray;
+  background: #e8e7e7;
+
 }
 .header{
   position: fixed;

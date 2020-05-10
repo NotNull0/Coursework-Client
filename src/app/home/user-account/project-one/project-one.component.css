@@ -1,6 +1,11 @@
-.container {
-  width: 28vw;
-  height: 10vh;
-  background: aqua;
-  margin: 1vh 1vw;
+/*.container {*/
+/*  width: 20vw;*/
+/*  height: 8vh;*/
+/*  background: white;*/
+
+
+/*}*/
+.example-card {
+  max-width: 350px;
+  margin: 3px 3px;
 }

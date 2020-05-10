@@ -19,6 +19,8 @@ import { ProjectOneComponent } from './home/user-account/project-one/project-one
 import { ProjectStatusOneComponent } from './home/user-account/project-status-one/project-status-one.component';
 import { CreateTaskDialogComponent } from './dialogs/create-task-dialog/create-task-dialog.component';
 import { OpenTaskDialogComponent } from './dialogs/open-task-dialog/open-task-dialog.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminAccountComponent } from './admin/admin-account/admin-account.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { OpenTaskDialogComponent } from './dialogs/open-task-dialog/open-task-di
     ProjectStatusOneComponent,
     CreateTaskDialogComponent,
     OpenTaskDialogComponent,
+    AdminComponent,
+    AdminAccountComponent,
   ],
   entryComponents:[
     CreateTaskDialogComponent,

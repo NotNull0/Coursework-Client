@@ -4,6 +4,8 @@ import {SignInComponent} from './sign-in/sign-in.component';
 import {HomeComponent} from './home/home.component';
 import {DashboardComponent} from './home/dashboard/dashboard.component';
 import {UserAccountComponent} from './home/user-account/user-account.component';
+import {AdminComponent} from './admin/admin.component';
+import {AdminAccountComponent} from './admin/admin-account/admin-account.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,13 @@ const routes: Routes = [
       },
       {
         path: 'user', component: UserAccountComponent
+      }
+    ]
+  }, {
+    path: 'admin', component: AdminComponent,
+    children: [
+      {
+        path: 'account', component: AdminAccountComponent
       }
     ]
   }
