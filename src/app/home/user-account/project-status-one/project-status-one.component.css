@@ -1,7 +1,7 @@
 .example-container {
   width: 400px;
   max-width: 100%;
-  margin: 50px 50px 50px 50px;
+  margin: 50px -20px 50px 75px;
 
   display: inline-block;
   vertical-align: top;
@@ -10,7 +10,7 @@
 
 .example-list {
   border: solid 1px #ccc;
-  min-height: 500px;
+  min-height: 90vh;
   background: white;
   border-radius: 4px;
   overflow: hidden;
@@ -48,7 +48,6 @@
 }
 
 .example-box:last-child {
-  border: none;
 }
 
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {

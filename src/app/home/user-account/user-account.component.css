@@ -9,8 +9,7 @@
   display: inline-block;
   float: left;
   overflow-x: hidden;
-  background: red;
-
+  background: #eae5e5;
 }
 
 .left-container {
