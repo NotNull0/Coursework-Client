@@ -1,6 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic');
 
+.font-header{
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.15em;
+  font-family: Montserrat,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color: #009da0!important;
+}
+.font-main{
+  font-size: 0.75rem;
+  font-weight: 200;
+  line-height: 1.5em;
+  font-family: Montserrat,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
 html, body {
   height: 100%;
   background-image: url('assets/background/bg.jpg');
@@ -21,14 +35,16 @@ html, body {
 body {
   margin: 0;
   /*font-family: 'Helvetica', 'Arial', sans-serif;*/
-  font-family: 'Open Sans', sans-serif;
-}
 
+}
 * {
   margin: 0;
   padding: 0;
   /*font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;*/
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: Montserrat,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  letter-spacing: .3px;
 }
 .mat-drawer-content{
   overflow: hidden;
@@ -55,3 +71,11 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0,0,0,0);
 }
+/*fonts*/
+/*@font-face {
+  font-family: feather;
+  !*src: url(fonts/feather.eot?9xfrq8);*!
+  src: url(fonts/feather.eot?9xfrq8#iefix) format('embedded-opentype'), url(fonts/feather.ttf?9xfrq8) format('truetype'), url(fonts/feather.woff?9xfrq8) format('woff'), url(fonts/feather.svg?9xfrq8#feather) format('svg');
+  font-weight: 400;
+  font-style: normal
+}*/

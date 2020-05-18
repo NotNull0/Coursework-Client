@@ -8,6 +8,19 @@
     [cdkDropListConnectedTo]="connectedList"
     class="example-list"
     (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let item of task" (contextmenu)="openDialog(item)" cdkDrag>{{item.name}}</div>
+      <mat-card class="example-box" *ngFor="let item of task" (contextmenu)="openDialog(item)" cdkDrag>
+          <mat-card-title class="font-header">{{item.name}}</mat-card-title>
+        <mat-card-content class="font-main">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image" [ngClass]="{'background-image':'url(https://images.unsplash.com/photo-1504021037272-d8413c3411db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)'}"></div>
+          <mat-card-title class="font-main" style="padding-top: 0.3rem">Андрюха Балян</mat-card-title>
+        </mat-card-header>
+      </mat-card>
   </div>
 </div>
