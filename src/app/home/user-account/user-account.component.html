@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <p class="project-name">{{selectProjectObject?.name}}</p>
+  <p class="project-name font-header font-weight-700">{{selectProjectObject?.name}}</p>
   <button class="create-task-button" mat-raised-button (click)="openDialog()">Додати нове завдання</button>
 
 </mat-toolbar>
@@ -13,7 +13,7 @@
     <button class="list-project" mat-fab  (click)="drawer.toggle()">
       <mat-icon>list</mat-icon>
     </button>
-
+<p class="font-header header-dashboard">Дошка завдань</p>
     <app-project-status-one *ngFor="let one of projectStatuses" [connectedList]="connectedList"
                             [status]="one"></app-project-status-one>
 
