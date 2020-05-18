@@ -12,7 +12,6 @@
   display: inline-block;
   float: left;
   overflow-x: hidden;
-  background: #f2f2f2;
 }
 
 .left-container {
@@ -20,8 +19,8 @@
 
   height: 100vh;
   display: inline-block;
-  float: left;
-  background: #e8e7e7;
+  float: left;/*
+  background: #e8e7e7;*/
 
 }
 .header{
