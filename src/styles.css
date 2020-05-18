@@ -10,8 +10,12 @@ html, body {
   background-repeat: no-repeat;
   -webkit-transition: background .3s;
   transition: background .3s;
+  overflow: hidden;
 }
 .mat-drawer-container{
+  background: rgba(0,0,0,0);
+}
+.mat-toolbar{
   background: rgba(0,0,0,0);
 }
 body {
@@ -26,7 +30,28 @@ body {
   /*font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;*/
   font-family: 'Open Sans', sans-serif;
 }
+.mat-drawer-content{
+  overflow: hidden;
 
+}
 .pointer {
   cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0);
 }

@@ -5,12 +5,12 @@
 </mat-toolbar>
 
 <mat-drawer-container class="container" autosize>
-  <mat-drawer #drawer class="left-container" mode="over">
+  <mat-drawer #drawer class="left-container" mode="side">
     <app-project-one *ngFor="let one of projects?.content" [project]="one"></app-project-one>
   </mat-drawer>
 
   <div class="right-container">
-    <button class="list-project" mat-fab color="primary" (click)="drawer.toggle()">
+    <button class="list-project" mat-fab  (click)="drawer.toggle()">
       <mat-icon>list</mat-icon>
     </button>
 
