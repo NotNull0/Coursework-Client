@@ -1,7 +1,7 @@
 .example-container {
   width: 22vw;
   max-width: 100%;
-  min-width: 400px;
+  min-width: 300px;
   margin: 15px -20px 50px 75px;
   display: inline-block;
   vertical-align: top;
