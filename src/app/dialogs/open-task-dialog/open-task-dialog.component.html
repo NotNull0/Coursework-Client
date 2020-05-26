@@ -8,25 +8,23 @@
 <mat-grid-list cols="4" rowHeight="300px">
 
   <mat-grid-tile colspan="2">
-    <mat-card class="desc">
-      <mat-card-content>
+    <mat-card style="background: rgba(0,0,0,0.60)" class="desc">
+      <mat-card-content >
         <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
+          {{data.description}}
         </p>
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
-  <mat-grid-tile class="tegs"colspan="2">
-    <mat-card >
+  <mat-grid-tile  style="background: rgba(0,0,0,0.10)" class="tegs"colspan="2">
+    <mat-card style="background: rgba(0,0,0,0.10)" >
       <mat-list>
-        <mat-list-item> Номер :{{data.id}} </mat-list-item>
-        <mat-list-item> Назва :{{data.name}} </mat-list-item>
-        <mat-list-item> Статус :{{data.status.name}} </mat-list-item>
-        <mat-list-item> Створив :{{data?.assignedToUser}} </mat-list-item>
-        <mat-list-item> Виконавець :{{data?.idCreator}} </mat-list-item>
-        <mat-list-item> Тип завдання :{{data.typeTask}} </mat-list-item>
+        <mat-list-item style="background: rgba(0,0,0,0.40)"> Номер :   {{data.id}} </mat-list-item>
+        <mat-list-item style="background: rgba(0,0,0,0.40)"> Назва :   {{data.name}} </mat-list-item>
+        <mat-list-item style="background: rgba(0,0,0,0.40)"> Статус :  {{data.status.name}} </mat-list-item>
+        <mat-list-item style="background: rgba(0,0,0,0.40)"> Створив :  {{data?.assignedToUser}} </mat-list-item>
+        <mat-list-item style="background: rgba(0,0,0,0.40)"> Виконавець :  {{data?.idCreator}} </mat-list-item>
+        <mat-list-item style="background: rgba(0,0,0,0.40)"> Тип завдання :  {{data.typeTask}} </mat-list-item>
       </mat-list>
     </mat-card>
   </mat-grid-tile>

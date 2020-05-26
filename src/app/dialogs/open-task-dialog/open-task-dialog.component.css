@@ -8,16 +8,13 @@
 }
 
 .desc {
-  margin-top: -135px;
+
+  margin-top: -200px;
   border-bottom: solid 1px black;
-  -webkit-box-shadow: 10px 10px 5px 3px rgba(224,224,224,1);
-  -moz-box-shadow: 10px 10px 5px 3px rgba(224,224,224,1);
-  box-shadow: 10px 10px 5px 3px rgba(224,224,224,1);
 
 }
 .tegs{
   margin-top: 10px;
-
 }
 
 .delete {
