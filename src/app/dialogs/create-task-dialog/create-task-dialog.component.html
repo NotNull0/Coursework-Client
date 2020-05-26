@@ -24,6 +24,12 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Опис завдання</mat-label>
+    <label>
+      <textarea matInput formControlName="description"></textarea>
+    </label>
+  </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-raised-button (click)="onNoClick()">Добавити</button>

@@ -82,7 +82,7 @@ body {
   font-style: normal
 }*/
 .mat-raised-button,.mat-fab,.mat-dialog-container{
-  background: rgba(0,0,0,0.2)!important;
+  background: rgba(0,0,0,0.52)!important;
 
 }
 .mat-select-panel{

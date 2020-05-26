@@ -10,4 +10,6 @@ export class Task {
   assignedToUser: number;
   status: Status;
   project: Project;
+  description:string;
+
 }

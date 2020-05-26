@@ -8,4 +8,5 @@ export class TaskDto {
   name: string;
   idCreator: number;
   assignedToUser: number;
+  description:string;
 }

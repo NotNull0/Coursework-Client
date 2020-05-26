@@ -29,6 +29,7 @@ export class CreateTaskDialogComponent implements OnInit {
       idStatus: [null, Validators.required],
       typeTask: [null, Validators.required],
       name: [null, Validators.required],
+      description: [null, Validators.required],
       projectId: [this.data.projectId, Validators.required]
     });
     this.newTask = this.createTaskFG.valueChanges.subscribe(value => {

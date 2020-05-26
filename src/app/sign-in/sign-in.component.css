@@ -5,7 +5,8 @@
 
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 65vh;
+
   overflow: hidden;
 }
 mat-form-field{
