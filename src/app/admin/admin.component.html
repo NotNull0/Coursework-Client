@@ -1,33 +1,30 @@
-<mat-toolbar color="primary" class="header">
-  <mat-toolbar-row>
-    <div class="container-header">
-      <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">MENU</button>
-      <!--      <span>Admin Page</span>-->
-      <!--      <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">Працівники</button>-->
-      <!--      <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">Primary</button>-->
-      <!--      <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">Primary</button>-->
+<div class="main-container">
+  <mat-toolbar color="primary" class="header">
+    <mat-toolbar-row>
+      <div class="container-header">
+        <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">MENU</button>
+        <!--      <span>Admin Page</span>-->
+        <!--      <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">Працівники</button>-->
+        <!--      <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">Primary</button>-->
+        <!--      <button mat-raised-button color="primary" class="example-icon" (click)="drawer.toggle()">Primary</button>-->
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="left-container" mode="over">
+      <button [routerLink]="'/admin/account'" [routerLinkActive]="'active'" (click)="drawer.toggle()" mat-raised-button>
+        account
+      </button>
+      <button [routerLink]="'/admin/project'" [routerLinkActive]="'active'" (click)="drawer.toggle()" mat-raised-button>
+        project
+      </button>
+    </mat-drawer>
+    <div class="main">
+
+      <div class="right-container" [@animRoutes]="getPage(appOutlet)">
+        <router-outlet #appOutlet="outlet"></router-outlet>
+      </div>
     </div>
-  </mat-toolbar-row>
-</mat-toolbar>
-<mat-drawer-container class="container" autosize>
-  <mat-drawer #drawer class="left-container" mode="side">
-    <button mat-raised-button>account</button>
-    <button mat-raised-button>menu</button>
-    <button mat-raised-button>menu</button>
-    <button mat-raised-button>menu</button>
-    <button mat-raised-button>menu</button>
-    <button mat-raised-button>menu</button>
-    <button mat-raised-button>menu</button>
-    <button mat-raised-button>menu</button>
-    <button mat-raised-button>menu</button>
-    <button mat-raised-button>menu</button>
-    <button mat-raised-button>menu</button>
-    <button mat-raised-button>menu</button>
-  </mat-drawer>
 
-
-  <div class="right-container">
-    <router-outlet></router-outlet>
-  </div>
-
-</mat-drawer-container>
+  </mat-drawer-container>
+</div>

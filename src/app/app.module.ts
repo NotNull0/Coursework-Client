@@ -21,6 +21,7 @@ import { CreateTaskDialogComponent } from './@dialog/create-task-dialog/create-t
 import { OpenTaskDialogComponent } from './@dialog/open-task-dialog/open-task-dialog.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminAccountComponent } from './admin/admin-account/admin-account.component';
+import { AdminProjectComponent } from './admin/admin-project/admin-project.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AdminAccountComponent } from './admin/admin-account/admin-account.compo
     OpenTaskDialogComponent,
     AdminComponent,
     AdminAccountComponent,
+    AdminProjectComponent,
   ],
   entryComponents:[
     CreateTaskDialogComponent,
