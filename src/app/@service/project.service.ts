@@ -5,6 +5,8 @@ import {catchError, map} from 'rxjs/operators';
 import {Page, PageImpl} from '../@model/page';
 import {Project} from '../@model/project';
 import {Status} from './model/status';
+import {UserRegistrationDto} from '../@model/dto/user.registration.dto';
+import {ProjectSaveDto} from '../@model/dto/project.save.dto';
 
 @Injectable({providedIn: 'root'})
 export class ProjectService {
@@ -26,4 +28,8 @@ export class ProjectService {
       .pipe(map(value => value._embedded.statuses), catchError(err => throwError(err)));
   }
 
+  save(projectSaveDto: ProjectSaveDto): Observable<number> {
+    return this._httpClient.post<number>(this.controller + `/project`, JSON.stringify(projectSaveDto))
+      .pipe(catchError(err => throwError(err)));
+  }
 }
