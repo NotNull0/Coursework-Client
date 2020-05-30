@@ -6,6 +6,7 @@
   left: 0;
   position: absolute;
   text-align: center;
+  overflow-y: auto;
 }
 
 .container-table{
