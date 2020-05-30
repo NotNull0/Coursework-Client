@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {animate, animateChild, group, query, style, transition, trigger} from '@angular/animations';
+import {UserDetailsService} from '../@service/user-details.service';
+import {User} from '../@service/model/user.model';
 
 @Component({
   selector: 'app-admin',
@@ -37,8 +39,13 @@ import {animate, animateChild, group, query, style, transition, trigger} from '@
   ]
 })
 export class AdminComponent implements OnInit {
+  user: User;
 
-  constructor() {
+  constructor(private _userDetailsService: UserDetailsService) {
+    this.user = _userDetailsService.getUser();
+    _userDetailsService.user$.subscribe(value => {
+      this.user = _userDetailsService.getUser();
+    });
   }
 
   getPage(outlet) {

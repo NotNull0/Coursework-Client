@@ -12,6 +12,16 @@
   </mat-toolbar>
   <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="left-container" mode="over">
+      <mat-card *ngIf="user">
+        <mat-card-header style="width: 20vw;margin: auto">
+          <div mat-card-avatar class="example-header-image"
+               [ngStyle]="{'background-image':'url('+'/assets/source/1.png'+')'}"></div>
+          <mat-card-title style="text-align: center;display: block"><p style="text-align: center;display: block">{{user?.name}}
+            {{user?.lastName}}</p></mat-card-title>
+          <mat-card-subtitle><p style="text-align: center;display: block">{{user?.email}}</p></mat-card-subtitle>
+        </mat-card-header>
+
+      </mat-card>
       <button [routerLink]="'/admin/account'" [routerLinkActive]="'active'" (click)="drawer.toggle()" mat-raised-button>
         account
       </button>
