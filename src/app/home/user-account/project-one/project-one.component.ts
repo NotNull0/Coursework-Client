@@ -1,5 +1,5 @@
 import {Component, Injectable, Input, OnInit} from '@angular/core';
-import {Project} from '../../../shared/model/project';
+import {Project} from '../../../@model/project';
 
 @Component({
   selector: 'app-project-one',

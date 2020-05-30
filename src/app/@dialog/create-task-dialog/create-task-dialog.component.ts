@@ -1,10 +1,10 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {TypeTask} from '../../shared/model/enums';
-import {Status} from '../../shared/service/model/status';
+import {TypeTask} from '../../@model/enums';
+import {Status} from '../../@service/model/status';
 import {CreateTaskData} from './create.task.data';
-import {TaskService} from '../../shared/service/task.service';
+import {TaskService} from '../../@service/task.service';
 
 @Component({
   selector: 'app-create-task-dialog',

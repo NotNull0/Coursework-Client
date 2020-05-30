@@ -2,8 +2,8 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable, throwError} from 'rxjs';
 import {catchError, map} from 'rxjs/operators';
-import {Page, PageImpl} from '../model/page';
-import {Project} from '../model/project';
+import {Page, PageImpl} from '../@model/page';
+import {Project} from '../@model/project';
 import {Status} from './model/status';
 
 @Injectable({providedIn: 'root'})

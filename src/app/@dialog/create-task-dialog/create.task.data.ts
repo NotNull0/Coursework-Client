@@ -1,4 +1,4 @@
-import {Status} from '../../shared/service/model/status';
+import {Status} from '../../@service/model/status';
 
 export class CreateTaskData {
   status:Status[];

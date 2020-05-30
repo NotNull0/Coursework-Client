@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {ProjectService} from '../../shared/service/project.service';
-import {Page} from '../../shared/model/page';
-import {Project} from '../../shared/model/project';
-import {Status} from '../../shared/service/model/status';
+import {ProjectService} from '../../@service/project.service';
+import {Page} from '../../@model/page';
+import {Project} from '../../@model/project';
+import {Status} from '../../@service/model/status';
 import {ActivatedRoute} from '@angular/router';
 import {MatDialog} from '@angular/material';
-import {CreateTaskDialogComponent} from '../../dialogs/create-task-dialog/create-task-dialog.component';
-import {CreateTaskData} from '../../dialogs/create-task-dialog/create.task.data';
+import {CreateTaskDialogComponent} from '../../@dialog/create-task-dialog/create-task-dialog.component';
+import {CreateTaskData} from '../../@dialog/create-task-dialog/create.task.data';
 
 @Component({
   selector: 'app-user-account',
