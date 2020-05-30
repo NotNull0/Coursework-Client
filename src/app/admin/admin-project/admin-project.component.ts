@@ -13,6 +13,8 @@ export class AdminProjectComponent implements OnInit {
   displayedColumns: string[] = [
     'id',
     'name',
+    'description',
+    'available',
     'actions',
   ];
 
@@ -28,6 +30,10 @@ export class AdminProjectComponent implements OnInit {
     }, error => {
       console.error(error);
     });
+  }
+
+  changeLock(o) {
+    o.available = !o.available;
   }
 
   delete(o) {
