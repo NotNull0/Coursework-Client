@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
-import {Task} from '../model/task';
+import {Task} from '../@model/task';
 import {catchError, map} from 'rxjs/operators';
 import {UserFindDto} from './model/user.find.dto';
 
 @Injectable({providedIn: 'root'})
 export class UserService {
-  private controller = 'http://localhost:8080';
+  private controller = 'http://localhost:8080/user';
 
   constructor(private _httpClient: HttpClient) {
   }

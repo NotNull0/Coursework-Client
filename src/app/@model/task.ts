@@ -1,5 +1,5 @@
 import {TypeTask} from './enums';
-import {Status} from '../service/model/status';
+import {Status} from '../@service/model/status';
 import {Project} from './project';
 
 export class Task {

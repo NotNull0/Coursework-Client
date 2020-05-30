@@ -1,10 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
-import {Task} from '../../../shared/model/task';
-import {Status} from '../../../shared/service/model/status';
-import {TaskService} from '../../../shared/service/task.service';
+import {Task} from '../../../@model/task';
+import {Status} from '../../../@service/model/status';
+import {TaskService} from '../../../@service/task.service';
 import {MatDialog} from '@angular/material';
-import {OpenTaskDialogComponent} from '../../../dialogs/open-task-dialog/open-task-dialog.component';
+import {OpenTaskDialogComponent} from '../../../@dialog/open-task-dialog/open-task-dialog.component';
 
 @Component({
   selector: 'app-project-status-one',

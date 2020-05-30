@@ -1,34 +1,5 @@
-.example-container {
-  width: 15vw;
-  height: 93vh;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.example-sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-.example-sidenav {
-  width: 15vw;
-  height: 93vh;
-}
-
-.example-icon {
-  display: flex;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-.container button {
-  margin-left: 1vw;
-}
-
-.header {
-  width: 99vw;
-  height: 5vh;
+.container{
+  width: 100vw;
+  height: 100vh;
+  background: green;
 }

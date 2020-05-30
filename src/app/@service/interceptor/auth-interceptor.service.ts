@@ -10,7 +10,7 @@ import 'rxjs/add/operator/do';
 import {catchError} from 'rxjs/operators';
 import {throwError} from 'rxjs';
 import {LocalStorageService} from "../rx-service/local-storage.service";
-import {environment} from '../../../../environments/environment';
+import {environment} from '../../../environments/environment';
 
 const BASIC = 'Basic  bXktY2xpZW50Om15LXNlY3JldA==';
 const BEARER = 'Bearer ';
