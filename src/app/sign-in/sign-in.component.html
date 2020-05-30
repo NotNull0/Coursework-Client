@@ -2,15 +2,19 @@
 
 <div class="container">
   <form class="inner-container" [formGroup]="loginFG">
-    <h2 class="font-header font-weight-600" style="object-position: left">Log in to your account</h2>
+    <h2 class="font-header font-weight-600" style="object-position: left  ">Вхід в обліковий запис</h2>
     <mat-form-field class="example-full-width">
       <mat-label>login</mat-label>
-      <input formControlName="login" matInput placeholder="Login" >
+      <label>
+        <input formControlName="login" matInput placeholder="Login" >
+      </label>
       <mat-error *ngIf="loginFG.get('login').invalid">.</mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>password</mat-label>
-      <input formControlName="password"  matInput placeholder="Password" type="password" >
+      <label>
+        <input formControlName="password"  matInput placeholder="Password" type="password" >
+      </label>
       <mat-error *ngIf="loginFG.get('password').invalid">.</mat-error>
     </mat-form-field>
     <button mat-raised-button style="margin-top: 4vh; width: 20vw;margin-bottom: 2vh" (click)="getUserToken()">Увійти</button>

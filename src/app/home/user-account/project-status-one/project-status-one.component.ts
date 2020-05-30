@@ -4,7 +4,9 @@ import {Task} from '../../../@model/task';
 import {Status} from '../../../@service/model/status';
 import {TaskService} from '../../../@service/task.service';
 import {MatDialog} from '@angular/material';
+import {UserService} from '../../../@service/user.service';
 import {OpenTaskDialogComponent} from '../../../@dialog/open-task-dialog/open-task-dialog.component';
+
 
 @Component({
   selector: 'app-project-status-one',
@@ -20,6 +22,7 @@ export class ProjectStatusOneComponent implements OnInit {
   taskToUpdate: Task;
 
   constructor(private _taskService: TaskService,
+              private _userService:UserService,
               public dialog: MatDialog) {
   }
 
@@ -61,6 +64,14 @@ export class ProjectStatusOneComponent implements OnInit {
   getTasksFromStatus(idStatus: number) {
     this._taskService.getProjectStatusTaskList(idStatus).subscribe(value => {
       this.task = value;
+    }, error => {
+      console.log(error);
+    });
+  }
+
+  getAssignedUser(idAssignedUser:number){
+    this._userService.findOne(idAssignedUser).subscribe(value => {
+      return value.name;
     }, error => {
       console.log(error);
     });
