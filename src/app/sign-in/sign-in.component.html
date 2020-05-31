@@ -1,6 +1,10 @@
+<!--
 <div class="main">
 
 <div class="container">
+  <div>
+
+  </div>
   <form class="inner-container" [formGroup]="loginFG">
     <h2 class="font-header font-weight-600" style="object-position: left  ">Вхід в обліковий запис</h2>
     <mat-form-field class="example-full-width">
@@ -20,4 +24,27 @@
     <button mat-raised-button style="margin-top: 4vh; width: 20vw;margin-bottom: 2vh" (click)="getUserToken()">Увійти</button>
   </form>
 </div>
+</div>
+-->
+<div class="body">
+  <div class="login-box">
+    <h2>Login</h2>
+    <form [formGroup]="loginFG">
+      <div class="user-box">
+        <input type="text" name="" required="" formControlName="login">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="" formControlName="password">
+        <label>Password</label>
+      </div>
+      <a class="pointer" (click)="getUserToken()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+    </form>
+  </div>
 </div>
